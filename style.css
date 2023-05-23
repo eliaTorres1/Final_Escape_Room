@@ -1,0 +1,173 @@
+/* if you want extra fonts... import them from the Google stylesheet! */
+@import url("https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+  background-image: url(images/background_5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+p {
+  font-size: 65px;
+  margin-top: 15px;
+  margin-left: 20px;
+  font-family: "bad script";
+  font-weight: bold;
+}
+.green {
+  filter: green;
+}
+.blur {
+  filter: blur(5px);
+}
+.red {
+  filter: red;
+}
+.translucent {
+  opacity: 0.5;
+}
+.begone {
+  display: none;
+  object-fit: contain;
+}
+
+.begone2 {
+  display: none;
+  object-fit: contain;
+}
+.hover:hover {
+  cursor: pointer;
+  filter: invert(25%) drop-shadow(15px 5px 10px);
+}
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 2;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.close {
+  color: #aaaaaa;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.center-bottom {
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+}
+.down:active {
+  transform: scaleY(0.7);
+}
+.thinbox {
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+.largebox {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+.mediumbox {
+  height: 30%;
+  width: 100%;
+  display: flex;
+}
+.smallbox {
+  height: 100%;
+  width: calc(100% / 3);
+  display: flex;
+}
+.tinybox {
+  height: 100%;
+  width: 20%;
+  display: flex;
+}
+.longbox {
+  height: 100%;
+  width: 80%;
+}
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  max-height: 80%;
+  max-width: 80%;
+}
+.img2 {
+  max-height: 50%;
+  max-width: 50%;
+}
+.img3 {
+  max-height: 65%;
+  max-width: 65%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  opacity: 0.9;
+}
+
+.modal-content {
+  width: 50%;
+  height: 60%;
+  background-color: black;
+  opacity: 1;
+  margin: 0;
+}

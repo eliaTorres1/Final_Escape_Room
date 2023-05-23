@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- make sure you LINK the HTML and CSS files together -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Escape Room</title>
+  </head>
+  <body id="bod">
+    <!-- words with fonts -->
+
+    <!-- rectangles with colors -->
+    <div class="thinbox">
+      <div class="longbox">
+        <p id="time"></p>
+      </div>
+      <div class="tinybox">
+        <div class="smallbox center-content">
+          <img class="begone2 img3" src="images/strike.png" id="strike1" />
+        </div>
+        <div class="smallbox center-content">
+          <img class="begone2 img3" src="images/strike.png" id="strike2" />
+        </div>
+        <div class="smallbox begone center-content">
+          <img class="begone2 img3" src="images/strike.png" id="strike3" />
+        </div>
+      </div>
+    </div>
+    <div class="largebox">
+      <div class="smallbox center-content">
+        <img
+          class="img3 hover down"
+          src="images/crown_clue.png"
+          id="slot_one"
+          onclick="slot1()"
+        />
+      </div>
+      <div class="smallbox center-content">
+        <img
+          class="img3 hover down"
+          src="images/red_dragon.png"
+          id="slot_two"
+          onclick="slot2()"
+        />
+      </div>
+      <div class="smallbox center-content">
+        <img
+          class="img3 hover down"
+          src="images/king.png"
+          id="slot_three"
+          onclick="slot3()"
+        />
+      </div>
+    </div>
+    <div class="mediumbox">
+      <div class="smallbox">
+        <div class="smallbox center-content">
+          <img class="img2 begone" src="images/king.png" id="clue_one" />
+        </div>
+        <div class="smallbox center-content">
+          <img class="img2 begone" src="images/red_dragon.png" id="clue_two" />
+        </div>
+        <div class="smallbox center-content">
+          <img
+            class="img2 begone"
+            src="images/crown_clue.png"
+            id="clue_three"
+          />
+        </div>
+      </div>
+      <div class="smallbox center-content">
+        <img
+          class="hover down"
+          src="images/Treasure_Chest2.png"
+          id="treasure"
+          onclick="submit()"
+        />
+      </div>
+      <div class="smallbox">
+        <div class="smallbox center-content">
+          <img class="img2 begone" src="images/crown_clue.png" id="clue_four" />
+        </div>
+        <div class="smallbox center-content">
+          <img class="img2 begone" src="images/crown_clue.png" id="clue_five" />
+        </div>
+        <div class="smallbox center-content">
+          <img class="img2 begone" src="images/king.png" id="clue_six" />
+        </div>
+      </div>
+    </div>
+    <div class="thinbox">
+      <div class="tinybox center-content">
+        <img class="hover down" src="images/scroll.png" onclick="clue()" />
+      </div>
+      <div class="longbox">
+        <img class="img3" src="images/one.png" />
+        <img class="img3 translucent" src="images/2.png" id="level_2" />
+        <img class="img3 translucent" src="images/3.png" id="level_3" />
+      </div>
+    </div>
+    <div id="keyModal" class="modal center-content">
+      <div class="modal-content center-content">
+        <img
+          src="images/key.webp"
+          class="contain-image hover"
+          onclick="nextPage()"
+        />
+      </div>
+    </div>
+
+    <div id="clueModal" class="modal center-content">
+      <!-- this is the "X" button to close the modal -->
+      <span class="close" onclick="hideModal()">&times;</span>
+      <!-- this is a new blank canvas for you to build -->
+      <div class="modal-content center-content">
+        <img src="images/modal_clue2.PNG" class="contain-image" />
+      </div>
+    </div>
+
+    <audio src="sounds/clickerSword.mp3" type="audio/mp3" id="noise"></audio>
+    <audio src="sounds/try.mp3" type="audio/mp3" id="failure"></audio>
+    <audio src="sounds/win.mp3" type="audio/mp3" id="winner"></audio>
+    <audio src="sounds/level_win.mp3" type="audio/mp3" id="advance"></audio>
+    <audio src="sounds/Wrongbuzz.mp3" type="audio/mp3" id="clicker"></audio>
+  </body>
+  <script src="script.js"></script>
+</html>
